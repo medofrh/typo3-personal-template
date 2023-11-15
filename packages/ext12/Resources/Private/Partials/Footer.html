@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto">
+                <div class="small m-0 text-white">
+                    <f:cObject typoscriptObjectPath="lib.copyright" />
+                </div>
+            </div>
+            <div class="col-auto">
+                <f:for each="{metaNav}" as="item" iteration="i">
+                    <f:link.typolink parameter="{item.data.uid}" title="{item.title}" target="{item.target}"
+                        class="link-light small mx-1 {f:if(condition: item.current, then: 'metanav-current')}">
+                        {item.title}
+                    </f:link.typolink>
+                    <f:if condition="!{i.isLast}">
+                        <span class="text-white mx-1">&middot;</span>
+                    </f:if>
+                </f:for>
+                <f:comment>
+                    <a class="link-light small" href="#!">Privacy</a>
+                    <span class="text-white mx-1">&middot;</span>
+                    <a class="link-light small" href="#!">Terms</a>
+                    <span class="text-white mx-1">&middot;</span>
+                    <a class="link-light small" href="#!">Contact</a>
+                </f:comment>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>

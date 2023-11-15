@@ -1,0 +1,119 @@
+header.bg-dark h1,
+header.bg-dark h2,
+header.bg-dark h3,
+header.bg-dark h4,
+header.bg-dark h5,
+header.bg-dark h6,
+header.bg-dark p {
+    color: #fff;
+}
+
+.nav-current {
+    color: #fff;
+}
+
+ul ul .nav-current {
+    background: #ddd;
+    color: #212529;
+}
+
+ul .nav-active {
+    color: #ddd;
+}
+
+a.link-light.small.mx-1.metanav-current {
+    color: #ff8700 !important;
+}
+
+a.link-light.small.mx-1 {
+    text-decoration: none;
+}
+
+img.siteLogo {
+    max-width: 10%;
+    height: auto;
+}
+
+.rootline a,
+.rootline a:visited {
+    color: #666;
+    display: inline-block;
+}
+
+.rootline a:after {
+    display: inline-block;
+    content: ">";
+    margin: 0 .5rem;
+}
+
+.rootline a:hover {
+    color: #ff8700;
+}
+
+.ce-gallaery img {
+    display: unset;
+}
+
+.ce-intext [data-ce-columns="1"],
+.ce-intext [data-ce-columns="2"],
+.ce-intext [data-ce-columns="3"],
+.ce-intext [data-ce-columns="4"] {
+    width: 100%;
+}
+
+.ce-intext [data-ce-columns="2"] .ce-column,
+.ce-center [data-ce-columns="2"] .ce-column {
+    width: 48%;
+    margin-right: 2%;
+}
+
+.ce-intext [data-ce-columns="3"] .ce-column,
+.ce-center [data-ce-columns="3"] .ce-column {
+    width: 31%;
+    margin-right: 2%;
+}
+
+.ce-intext [data-ce-columns="4"] .ce-column,
+.ce-center [data-ce-columns="4"] .ce-column {
+    width: 23%;
+    margin-right: 2%;
+}
+
+.ce-intext.ce-right .ce-gallaery {
+    margin-left: 0;
+}
+
+.ce-textpic,
+.ce-image,
+.ce-nowrap .ce-bodytext,
+.ce-uploads li,
+.ce-uploads div {
+    overflow: visible;
+}
+
+@media screen and (min-width: 601px) {
+
+    .ce-intext [data-ce-columns="1"],
+    .ce-intext [data-ce-columns="2"],
+    .ce-intext [data-ce-columns="3"],
+    .ce-intext [data-ce-columns="4"] {
+        width: 50%;
+    }
+
+    .ce-intext.ce-right .ce-gallaery {
+        margin-left: 1rem;
+    }
+
+    .ce-intext.ce-left .ce-gallaery {
+        margin-right: 1rem;
+    }
+
+    .ce-textpic,
+    .ce-image,
+    .ce-nowrap .ce-bodytext,
+    .ce-uploads li,
+    .ce-uploads div {
+        overflow: hidden;
+    }
+
+}

@@ -1,0 +1,8 @@
+lib.copyright = COA
+lib.copyright {
+    10 = TEXT
+    10.value = {$ext12.copyrightText}&nbsp;
+
+    20 = TEXT
+    20.data = date: Y
+}

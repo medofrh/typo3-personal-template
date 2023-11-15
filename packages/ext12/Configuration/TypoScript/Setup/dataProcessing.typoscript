@@ -1,0 +1,30 @@
+page.10.dataProcessing {
+
+    ## Main menu
+    10 = menu
+    10 {
+        as = MainMenu
+        expandAll = 1
+        levels = 2
+        titleField = subtitle // nav_title // title
+    }
+
+    ## Meta Navigation
+    20 = menu
+    20 {
+        as = metaNav
+        special = directory
+        special.value = {$ext12.metaNavPid}
+        levels = 1
+        titleField = subtitle // nav_title // title
+    }
+    ## Rootline
+    30 = menu
+    30 {
+        as = rootline
+        special = rootline
+        special.range = 0|-1
+        titleField = subtitle // nav_title // title
+        includeNotInMenu = 1
+    }
+}
