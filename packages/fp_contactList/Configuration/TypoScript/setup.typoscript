@@ -1,1 +1,16 @@
-@import "EXT:fp_contactlist/Configuration/TypoScript/Setup/*.typoscript"
+plugin.tx_fpcontactlist {
+	view {
+		templateRootPaths {
+			1 = {$plugin.tx_fpcontactlist.view.templateRootPath}
+		}
+		partialRootPaths {
+			1 = {$plugin.tx_fpcontactlist.view.partialRootPath}
+		}
+		layoutRootPaths {
+			1 = {$plugin.tx_fpcontactlist.view.layoutRootPath}
+		}
+	}
+	persistence {
+		storagePid = {$plugin.tx_fpcontactlist.persistence.storagePid}
+	}
+}

@@ -1,5 +1,5 @@
 {
-    "name": "fixpunkt/fp_contactlist",
+    "name": "fixpunkt/fp-contactlist",
     "type": "typo3-cms-extension",
     "description": "extension to show a list of contacts",
     "license": "GPL-2.0-or-later",
@@ -9,7 +9,7 @@
     },
     "autoload": {
        "psr-4": {
-          "MyVendor\\MyExtension\\": "Classes/"
+          "Fixpunkt\\FpContactlist\\": "Classes/"
        }
     },
     "extra": {

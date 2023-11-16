@@ -1,4 +1,19 @@
 {
+	"repositories": [
+	  {
+		"type": "composer",
+		"url": "https://composer.typo3.org/"
+	  },
+	  {
+		"type": "composer",
+		"url": "https://composer.fixpunkt.com/"
+	  },
+	  {
+		"type": "path",
+		"url": "packages/*"
+	  }
+	],
+	
 	"name": "typo3/cms-base-distribution",
 	"description" : "TYPO3 CMS Base Distribution",
 	"license": "GPL-2.0-or-later",
@@ -53,15 +68,10 @@
 		"typo3/minimal": "*",
 
 		"wapplersystems/ws-scss": "*",
+		"fixpunkt/fp-social": "*",
 
 		"fixpunkt/ext20": "@dev",
 		"fixpunkt/ext23": "@dev",
-		"fixpunkt/fp_contactlist": "@dev"
-	},
-	"repositories": {
-		"local": {
-			"type": "path",
-			"url": "./packages/*"
-		}
+		"fixpunkt/fp-contactlist": "@dev"
 	}
 }

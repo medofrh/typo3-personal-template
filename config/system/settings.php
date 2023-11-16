@@ -39,6 +39,10 @@ return [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
+        'fp_social' => [
+            'apiUrl' => 'https://social.fixpunkt.com/api/',
+            'debug' => '0',
+        ],
         'indexed_search' => [
             'catdoc' => '/usr/bin/',
             'debugMode' => '0',

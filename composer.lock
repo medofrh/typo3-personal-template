@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9ebf0bc36439e9c20345255c1790d66",
+    "content-hash": "8ab8dc475e508d85b4d6bbb1b0151e57",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -59,6 +59,55 @@
                 "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.8"
             },
             "time": "2022-12-07T17:46:57+00:00"
+        },
+        {
+            "name": "chefkoch/morphoji",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chefkoch-dev/morphoji.git",
+                "reference": "a7ee46f09d8850dae3a581e3d9e8c9f25d0f79c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chefkoch-dev/morphoji/zipball/a7ee46f09d8850dae3a581e3d9e8c9f25d0f79c2",
+                "reference": "a7ee46f09d8850dae3a581e3d9e8c9f25d0f79c2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Chefkoch\\Morphoji\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Bremmekamp",
+                    "email": "jens.bremmekamp@chefkoch.de"
+                }
+            ],
+            "description": "A library to convert UTF-8 emoji characters to latin1 placeholders and vice versa.",
+            "homepage": "https://github.com/chefkoch-dev/morphoji",
+            "keywords": [
+                "emoji",
+                "unicode",
+                "utf8"
+            ],
+            "support": {
+                "issues": "https://github.com/chefkoch-dev/morphoji/issues",
+                "source": "https://github.com/chefkoch-dev/morphoji/tree/master"
+            },
+            "time": "2017-03-22T11:40:21+00:00"
         },
         {
             "name": "christian-riesen/base32",
@@ -916,7 +965,7 @@
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "./packages/ext12",
+                "url": "packages/ext12",
                 "reference": "76ccdc6204ee6b6b8b702a03e3ee4becbbf386ff"
             },
             "require": {
@@ -947,7 +996,7 @@
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "./packages/ext23",
+                "url": "packages/ext23",
                 "reference": "904cde8daaa085e44b74f6aa8ed055cab6e0bd92"
             },
             "require": {
@@ -974,12 +1023,12 @@
             }
         },
         {
-            "name": "fixpunkt/fp_contactlist",
+            "name": "fixpunkt/fp-contactlist",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "./packages/fp_contactList",
-                "reference": "74d578145a6dad6ef0b6a65c7fb9e224144cffc1"
+                "url": "packages/fp_contactlist",
+                "reference": "1ce331576f2fb4ba5e9eafb375b07e695c60e191"
             },
             "require": {
                 "typo3/cms-core": "^11.5 || ^12.0",
@@ -993,7 +1042,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "MyVendor\\MyExtension\\": "Classes/"
+                    "Fixpunkt\\FpContactlist\\": "Classes/"
                 }
             },
             "license": [
@@ -1003,6 +1052,61 @@
             "transport-options": {
                 "relative": true
             }
+        },
+        {
+            "name": "fixpunkt/fp-social",
+            "version": "15.2.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:fixpunkt-com/fp-social.git",
+                "reference": "15b070eee365798d8e43d26f7bf76883765a2e12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fixpunkt-com/fp-social/zipball/15b070eee365798d8e43d26f7bf76883765a2e12",
+                "reference": "15b070eee365798d8e43d26f7bf76883765a2e12",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://repo.packagist.com/fixpunkt-werbeagentu/extensions/dists/%package%/%version%/r%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "chefkoch/morphoji": "^1",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "league/uri": "^6.0",
+                "league/uri-components": "*",
+                "php": ">= 7.4",
+                "typo3/cms-core": "^12.4"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "fp_social"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fixpunkt\\FpSocial\\": "Classes"
+                }
+            },
+            "notification-url": "https://composer.fixpunkt.com/fixpunkt-werbeagentu/extensions/downloads/",
+            "authors": [
+                {
+                    "name": "Yannik Börgener",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Importiert und gibt Post aus Social-Media-Portalen aus.",
+            "support": {
+                "source": "https://github.com/fixpunkt-com/fp-social/tree/15.2.0",
+                "issues": "https://github.com/fixpunkt-com/fp-social/issues"
+            },
+            "time": "2023-10-25T13:30:29+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1328,6 +1432,266 @@
                 }
             ],
             "time": "2023-08-27T10:13:57+00:00"
+        },
+        {
+            "name": "league/uri",
+            "version": "6.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri.git",
+                "reference": "a700b4656e4c54371b799ac61e300ab25a2d1d39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri/zipball/a700b4656e4c54371b799ac61e300ab25a2d1d39",
+                "reference": "a700b4656e4c54371b799ac61e300ab25a2d1d39",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "league/uri-interfaces": "^2.3",
+                "php": "^8.1",
+                "psr/http-message": "^1.0.1"
+            },
+            "conflict": {
+                "league/uri-schemes": "^1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^v3.9.5",
+                "nyholm/psr7": "^1.5.1",
+                "php-http/psr7-integration-tests": "^1.1.1",
+                "phpbench/phpbench": "^1.2.6",
+                "phpstan/phpstan": "^1.8.5",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.1.1",
+                "phpstan/phpstan-strict-rules": "^1.4.3",
+                "phpunit/phpunit": "^9.5.24",
+                "psr/http-factory": "^1.0.1"
+            },
+            "suggest": {
+                "ext-fileinfo": "Needed to create Data URI from a filepath",
+                "ext-intl": "Needed to improve host validation",
+                "league/uri-components": "Needed to easily manipulate URI objects",
+                "psr/http-factory": "Needed to use the URI factory"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Uri\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://nyamsprod.com"
+                }
+            ],
+            "description": "URI manipulation library",
+            "homepage": "https://uri.thephpleague.com",
+            "keywords": [
+                "data-uri",
+                "file-uri",
+                "ftp",
+                "hostname",
+                "http",
+                "https",
+                "middleware",
+                "parse_str",
+                "parse_url",
+                "psr-7",
+                "query-string",
+                "querystring",
+                "rfc3986",
+                "rfc3987",
+                "rfc6570",
+                "uri",
+                "uri-template",
+                "url",
+                "ws"
+            ],
+            "support": {
+                "docs": "https://uri.thephpleague.com",
+                "forum": "https://thephpleague.slack.com",
+                "issues": "https://github.com/thephpleague/uri/issues",
+                "source": "https://github.com/thephpleague/uri/tree/6.8.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/nyamsprod",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-09-13T19:58:47+00:00"
+        },
+        {
+            "name": "league/uri-components",
+            "version": "2.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri-components.git",
+                "reference": "c93837294fe9021d518fd3ea4c5f3fbba8b8ddeb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri-components/zipball/c93837294fe9021d518fd3ea4c5f3fbba8b8ddeb",
+                "reference": "c93837294fe9021d518fd3ea4c5f3fbba8b8ddeb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "league/uri-interfaces": "^2.3",
+                "php": "^7.4 || ^8.0",
+                "psr/http-message": "^1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^v3.22.0",
+                "guzzlehttp/psr7": "^2.2",
+                "laminas/laminas-diactoros": "^2.11",
+                "league/uri": "^6.0",
+                "phpstan/phpstan": "^1.10.28",
+                "phpstan/phpstan-deprecation-rules": "^1.1.4",
+                "phpstan/phpstan-phpunit": "^1.3.13",
+                "phpstan/phpstan-strict-rules": "^1.5.1",
+                "phpunit/phpunit": "^9.6.10"
+            },
+            "suggest": {
+                "ext-fileinfo": "Needed to create Data URI from a filepath",
+                "ext-gmp": "to improve handle IPV4 parsing",
+                "ext-intl": "to handle IDN host",
+                "jeremykendall/php-domain-parser": "Public Suffix and Top Level Domain parsing implemented in PHP",
+                "league/uri": "to allow manipulating URI objects",
+                "php-64bit": "to improve handle IPV4 parsing",
+                "psr/http-message-implementation": "to allow manipulating PSR-7 Uri objects"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Uri\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://nyamsprod.com"
+                }
+            ],
+            "description": "URI components manipulation library",
+            "homepage": "http://uri.thephpleague.com",
+            "keywords": [
+                "authority",
+                "components",
+                "fragment",
+                "host",
+                "path",
+                "port",
+                "query",
+                "rfc3986",
+                "scheme",
+                "uri",
+                "url",
+                "userinfo"
+            ],
+            "support": {
+                "source": "https://github.com/thephpleague/uri-components/tree/2.4.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/nyamsprod",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-08-13T19:53:57+00:00"
+        },
+        {
+            "name": "league/uri-interfaces",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri-interfaces.git",
+                "reference": "00e7e2943f76d8cb50c7dfdc2f6dee356e15e383"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri-interfaces/zipball/00e7e2943f76d8cb50c7dfdc2f6dee356e15e383",
+                "reference": "00e7e2943f76d8cb50c7dfdc2f6dee356e15e383",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.19",
+                "phpstan/phpstan": "^0.12.90",
+                "phpstan/phpstan-phpunit": "^0.12.19",
+                "phpstan/phpstan-strict-rules": "^0.12.9",
+                "phpunit/phpunit": "^8.5.15 || ^9.5"
+            },
+            "suggest": {
+                "ext-intl": "to use the IDNA feature",
+                "symfony/intl": "to use the IDNA feature via Symfony Polyfill"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Uri\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://nyamsprod.com"
+                }
+            ],
+            "description": "Common interface for URI representation",
+            "homepage": "http://github.com/thephpleague/uri-interfaces",
+            "keywords": [
+                "rfc3986",
+                "rfc3987",
+                "uri",
+                "url"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/uri-interfaces/issues",
+                "source": "https://github.com/thephpleague/uri-interfaces/tree/2.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/nyamsprod",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-06-28T04:27:21+00:00"
         },
         {
             "name": "lolli42/finediff",
@@ -2041,16 +2405,16 @@
         },
         {
             "name": "psr/http-message",
-            "version": "2.0",
+            "version": "1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message.git",
-                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71"
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/402d35bcb92c70c026d1a6a9883f06b2ead23d71",
-                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
                 "shasum": ""
             },
             "require": {
@@ -2059,7 +2423,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -2074,7 +2438,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
+                    "homepage": "http://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for HTTP messages",
@@ -2088,9 +2452,9 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-message/tree/2.0"
+                "source": "https://github.com/php-fig/http-message/tree/1.1"
             },
-            "time": "2023-04-04T09:54:51+00:00"
+            "time": "2023-04-04T09:50:52+00:00"
         },
         {
             "name": "psr/http-server-handler",
@@ -7984,7 +8348,7 @@
     "stability-flags": {
         "fixpunkt/ext20": 20,
         "fixpunkt/ext23": 20,
-        "fixpunkt/fp_contactlist": 20
+        "fixpunkt/fp-contactlist": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
