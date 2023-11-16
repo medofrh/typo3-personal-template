@@ -1,0 +1,13 @@
+ext23 {
+    rootUid = 2 
+    logoFile = EXT:ext23/Resources/Public/Images/Logo.png
+    logoAlt = Logo
+    logoTitle = Logo
+    logoHeight = 100
+
+    metaNavPid =
+
+    copyrightText = Copyright &copy; Fixpunkt
+}
+
+## TODO: dynamic Uid

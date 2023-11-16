@@ -73,9 +73,9 @@ return [
     ],
     'GFX' => [
         'processor' => 'ImageMagick',
-        'processor_allowTemporaryMasksAsPng' => '',
+        'processor_allowTemporaryMasksAsPng' => 0,
         'processor_colorspace' => 'RGB',
-        'processor_effects' => '',
+        'processor_effects' => false,
         'processor_enabled' => '1',
         'processor_path' => '/usr/bin/',
     ],

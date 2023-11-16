@@ -55,7 +55,8 @@
 		"wapplersystems/ws-scss": "*",
 
 		"fixpunkt/ext20": "@dev",
-		"fixpunkt/ext23": "@dev"
+		"fixpunkt/ext23": "@dev",
+		"fixpunkt/fp_contactlist": "@dev"
 	},
 	"repositories": {
 		"local": {

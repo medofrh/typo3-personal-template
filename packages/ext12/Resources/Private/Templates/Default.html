@@ -6,7 +6,8 @@
     <header class="bg-dark py-5">
         <div class="container px-5">
             <div class="row gx-5 align-items-center justify-content-center">
-                {content1 -> f:format.raw()}
+                <f:format.raw>{content1}</f:format.raw>
+
             </div>
         </div>
     </header>
@@ -15,7 +16,7 @@
 <f:section name="Main">
     <section class="py-5" id="features">
         <div class="container px-5 my-5">
-            {content0 -> f:format.raw()}
+            <f:format.raw>{content0}</f:format.raw>
         </div>
     </section>
 </f:section>

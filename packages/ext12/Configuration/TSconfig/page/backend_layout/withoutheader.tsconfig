@@ -1,5 +1,4 @@
 mod.web_layout.BackendLayouts {
-mod.web_layout.BackendLayouts {
     layoutwithoutheaderandcontent {
         title = Layout without header and content
         #icon = EXT:example_extension/Resources/Public/Images/favicon.ico

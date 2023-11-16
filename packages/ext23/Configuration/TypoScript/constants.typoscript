@@ -1,1 +1,2 @@
-@import "EXT:ext23/Configuration/TypoScript/Constants/*.typoscript"
+@import "EXT:ext23/Configuration/TypoScript/constants/*.typoscript"
+@import "EXT:ext23/Configuration/TypoScript/constants/ext/*.typoscript"

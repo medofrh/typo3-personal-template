@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90f64d6f6a52b535c7199f1a521ec7fc",
+    "content-hash": "d9ebf0bc36439e9c20345255c1790d66",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -969,6 +969,37 @@
                 "GPL-2.0-or-later"
             ],
             "description": "An example extension",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "fixpunkt/fp_contactlist",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/fp_contactList",
+                "reference": "74d578145a6dad6ef0b6a65c7fb9e224144cffc1"
+            },
+            "require": {
+                "typo3/cms-core": "^11.5 || ^12.0",
+                "typo3/cms-fluid-styled-content": "^11.5 || ^12.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "fp_contactlist"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MyVendor\\MyExtension\\": "Classes/"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "extension to show a list of contacts",
             "transport-options": {
                 "relative": true
             }
@@ -7952,7 +7983,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "fixpunkt/ext20": 20,
-        "fixpunkt/ext23": 20
+        "fixpunkt/ext23": 20,
+        "fixpunkt/fp_contactlist": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
