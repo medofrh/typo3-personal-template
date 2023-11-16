@@ -1,0 +1,54 @@
+page = PAGE
+
+page.meta {
+    viewport = width=device-width, initial-scale=1.0, shrink-to-fit=no
+}
+
+page.shortcutIcon = EXT:ext23/Resources/Public/Images/favicon.ico
+
+page.includeCSS {
+    bootstrap-icons = https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css
+    bootstrap-icons.external = 1
+    styles = EXT:ext23/Resources/Public/Css/styles.css
+    custom = EXT:ext23/Resources/Public/Css/custom.css
+}
+
+page.includeJSFooter {
+    bootstrap = https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js
+    bootstrap.external = 1
+    scripts = EXT:ext23/Resources/Public/Js/scripts.js
+}
+
+page.bodyTagAdd = class="d-flex flex-column h-100"
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+    layoutRootPath = EXT:ext23/Resources/Private/Layouts/
+    partialRootPath = EXT:ext23/Resources/Private/Partials/
+
+    #file = EXT:ext23/Resources/Private/Templates/Default.html
+    file.stdWrap.cObject = CASE
+    file.stdWrap.cObject {
+        key.data = pagelayout
+
+        pagets__layoutwithheaderandcontent = TEXT
+        pagets__layoutwithheaderandcontent.value = EXT:ext23/Resources/Private/Templates/Default.html
+
+    }
+ 
+    variables {
+        content0 < styles.content.get
+        
+        content1 < styles.content.get
+        content1 {
+            select.where = {#colPos} = 1
+        }
+    }
+
+    settings {
+        rootUid = {$ext23.rootUid}
+        logoFile = {$ext23.logoFile}
+        logoAlt = {$ext23.logoAlt}
+        logoTitle = {$ext23.logoTitle}
+    }
+}

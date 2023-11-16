@@ -1,0 +1,6 @@
+lib.contentElement {
+    partialRootPaths.100 = EXT:ext23/Resources/Private/Extensions/fluid_styled_content/Partials/
+}
+
+## data-attribute for fslightbox
+lib.contentElement.settings.media.popup.linkParams.ATagParams.dataWrap = data-fslightbox="image-{field:uid}" data-type="image"
