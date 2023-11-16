@@ -50,8 +50,12 @@
 		"typo3/cms-viewpage": "*",
 		"typo3/cms-webhooks": "*",
 		"typo3/cms-workspaces": "*",
-		"typo3/minimal": "^12",
-		"fixpunkt/ext20": "@dev"
+		"typo3/minimal": "*",
+
+		"wapplersystems/ws-scss": "*",
+
+		"fixpunkt/ext20": "@dev",
+		"fixpunkt/ext23": "@dev"
 	},
 	"repositories": {
 		"local": {

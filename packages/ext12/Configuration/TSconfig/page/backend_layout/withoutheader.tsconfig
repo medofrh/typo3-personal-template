@@ -1,0 +1,23 @@
+mod.web_layout.BackendLayouts {
+mod.web_layout.BackendLayouts {
+    layoutwithoutheaderandcontent {
+        title = Layout without header and content
+        #icon = EXT:example_extension/Resources/Public/Images/favicon.ico
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = normal
+                                colPos = 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,27 +1,29 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMD/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<main class="flex-shrink-0">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container px-5">
-            <f:link.typolink parameter="{settings.rootUid}" class="navbar-brand">
-                <f:image class="siteLogo" src="{settings.logoFile}" width="150" alt="{settings.logoAlt}" title="{settings.logoTitle}" />
-                <f:comment>##TODO:image sizes</f:comment>
-            </f:link.typolink>
-            <f:render partial="MainMenu" arguments="{_all}" /> 
-        </div>
-    </nav>
-    <!-- Header-->
-    <f:render section="Header" optional="true" />
-    <f:render partial="Rootline" arguments="{_all}" />
-    <f:render section="Main" />
-    <!-- Features section-->
+<div class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <f:link.typolink parameter="{settings.rootUid}" class="navbar-brand">
+                    <f:image class="siteLogo" src="{settings.logoFile}" width="150" alt="{settings.logoAlt}" title="{settings.logoTitle}" />
+                    <f:comment>##TODO:image sizes</f:comment>
+                </f:link.typolink>
+                <f:render partial="MainMenu" arguments="{_all}" /> 
+            </div>
+        </nav>
+        <!-- Header-->
+        <f:render section="Header" optional="true" />
+        <f:render partial="Rootline" arguments="{_all}" />
+        <f:render section="Main" />
+        <!-- Features section-->
 
-    <!-- Testimonial section-->
+        <!-- Testimonial section-->
 
-    <!-- Blog preview section-->
+        <!-- Blog preview section-->
 
-</main>
-<!-- Footer-->
-<f:render partial="Footer" arguments="{_all}" />
+    </main>
+    <!-- Footer-->
+    <f:render partial="Footer" arguments="{_all}" />
+</div>
 </html>

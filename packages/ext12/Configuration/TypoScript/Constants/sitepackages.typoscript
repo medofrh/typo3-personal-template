@@ -5,7 +5,7 @@ ext12 {
     logoTitle = Logo
     logoHeight = 100
 
-    metaNavPid = 19
+    metaNavPid =
 
     copyrightText = Copyright &copy; Fixpunkt
 }
