@@ -121,3 +121,13 @@ img.siteLogo {
     }
 
 }
+
+.contact-input-box {
+    margin-bottom: 1rem; /* Adjust the bottom margin as needed */
+  }
+  
+  /* Add margin to the f:render partial */
+  /* Assuming the f:render generates a specific HTML tag (e.g., div, section, etc.), let's use a placeholder element (div in this example) */
+  .rendered-partial {
+    margin-top: 1rem; /* Adjust the top margin as needed */
+  }

@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" data-namespace-typo3-fluid="true">
 
-<table class="table">
+<table class="table contact-rendered-partial">
     <thead class="thead-light">
         <tr>
             <th scope="col">id</th>
@@ -10,36 +10,20 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>John Doe</td>
-            <td>johndoe@example.com</td>
-            <td>555-1234</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jane Smith</td>
-            <td>janesmith@example.com</td>
-            <td>555-5678</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Bob Johnson</td>
-            <td>bobjohnson@example.com</td>
-            <td>555-9012</td>
-        </tr>
-        <tr>
-            <th scope="row">4</th>
-            <td>Samantha Lee</td>
-            <td>samanthalee@example.com</td>
-            <td>555-3456</td>
-        </tr>
+        <f:for each="{data}" as="contact">
+            <tr>
+                <th scope="row">{contact.uid}</th>
+                <td>{contact.name}</td>
+                <td>{contact.email}</td>
+                <td>{contact.phone}</td>
+            </tr>
+        </f:for>
     </tbody>
 </table>
 
 </html>
-        
-    </tbody>
+
+</tbody>
 </table>
 
 </html>
