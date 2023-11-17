@@ -1,13 +1,13 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMD/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:debug inline="true">{_all}</f:debug>
-<f:form action="search" controller="Contact">
+
+<f:form action="search" controller="Contact" enctype="multipart/form-data" method="post">
 
     <div class="contact-input-box">
         <div class="contact-input-box">
             <f:form.textfield class="form-control" type="search" name="list" placeholder="search for contact" />
         </div>
         
-        <f:render partial="Table" arguments="{data:contacts}" />
+        <f:render partial="Table" arguments="{f:if(condition: '{data.email}', then: '{data:email}', else: '{data:contacts}')}" />
 </f:form>
 
 </html>

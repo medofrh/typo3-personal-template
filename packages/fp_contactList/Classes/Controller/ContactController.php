@@ -27,8 +27,12 @@ class ContactController extends ActionController {
 
     public function searchAction() : ResponseInterface {
         $input = $this->request->getArgument('list');
+        if (!empty($input) && $input !== null) {
         $email = $this->contactRepository->findByEmail($input);
         $this->view->assign('email', $email);
         return $this->htmlResponse();
+        }else{
+            return $this->listAction();
+        }
     }
 }

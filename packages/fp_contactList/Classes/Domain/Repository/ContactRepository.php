@@ -6,10 +6,14 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
 
 class ContactRepository extends Repository {
     
-    public function findByEmail($email) {
+    public function findByEmail($inputData) {
         $query = $this->createQuery();
         $query->matching(
-            $query->equals('email', $email)
+            $query->logicalOr(
+                $query->equals('name', $inputData),
+                $query->equals('email', $inputData),
+                $query->equals('phone', $inputData)
+            )
         );
         
         return $query->execute();
