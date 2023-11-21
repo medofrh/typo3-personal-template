@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>
+</f:comment>
+<div class="container">
+    <f:debug inline="true">{_all}</f:debug>
+    <h1>{data.header}</h1>
+    <div class="row">
+        <!-- <h2>header (200)</h2> -->
+        <f:if condition="{children_200}">
+            <div class="col-12">
+                <f:for each="{children_200}" as="child">
+                    <h6 class="header-children">{child.header}</h6>
+                    <f:format.raw>{child.renderedContent}</f:format.raw>
+                </f:for>
+            </div>
+        </f:if>
+        
+        <!-- <h2>left side (201)</h2> -->
+        <f:if condition="{children_201}">
+            <div class="col-6">
+                <f:for each="{children_201}" as="child">
+                    <h6 class="left-children">{child.header}</h6>
+                    <f:format.raw>{child.renderedContent}</f:format.raw>
+                </f:for>
+        
+            </div>
+        </f:if>
+        
+        <!-- <h2>right side (202)</h2> -->
+        <f:if condition="{children_202}">
+            <div class="col-6">
+                <f:for each="{children_202}" as="child">
+                    <h6 class="right-children">{child.header}</h6>
+                    <f:format.raw>{child.renderedContent}</f:format.raw>
+                </f:for>
+            </div>
+        </f:if>
+    </div>
+</div>
+
+</html>

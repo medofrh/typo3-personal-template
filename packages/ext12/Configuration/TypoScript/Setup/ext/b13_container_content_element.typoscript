@@ -1,0 +1,11 @@
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+tt_content.b13-2cols < lib.contentElement
+tt_content.b13-2cols {
+    templateName = b13-2cols
+    templateRootPaths {
+        10 = EXT:ext12/Resources/Private/Templates
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}

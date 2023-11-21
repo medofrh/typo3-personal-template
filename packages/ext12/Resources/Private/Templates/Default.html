@@ -7,18 +7,20 @@
         <div class="container px-5">
             <div class="row gx-5 align-items-center justify-content-center">
                 <f:format.raw>{content1}</f:format.raw>
-
             </div>
         </div>
     </header>
 </f:section>
 
 <f:section name="Main">
-    <section class="py-5" id="features">
-        <div class="container px-5 my-5">
-            <f:format.raw>{content0}</f:format.raw>
-        </div>
-    </section>
+    <main class="flex-shrink-0">
+        <f:comment>
+        </f:comment>
+        <f:format.raw>{content0}</f:format.raw>
+        <f:render partial="Features" optional="true" />
+        <f:render partial="Testimonial" optional="true" />
+        <f:render partial="Blog" optional="true" />
+    </main>
 </f:section>
 
 </html>

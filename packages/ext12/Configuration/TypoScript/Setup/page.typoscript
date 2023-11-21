@@ -48,6 +48,7 @@ page.10 {
         content1 {
             select.where = {#colPos} = 1
         }
+        
     }
 
     settings {
