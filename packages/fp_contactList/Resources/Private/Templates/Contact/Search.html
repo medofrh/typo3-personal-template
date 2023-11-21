@@ -1,13 +1,29 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMD/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:debug inline="true">{_all}</f:debug>
 <f:form action="search" controller="Contact">
-
     <div class="contact-input-box">
-        <div class="contact-input-box">
-            <f:form.textfield class="form-control" type="search" name="list" placeholder="search for contact" />
-        </div>
-        
-        <f:render partial="Table" arguments="{f:if(condition: '{data.email}', then: '{data:email}', else: '{data:contacts}')}" />
+        <f:if condition="{contacts}">
+            <f:then>
+                <div class="alert alert-danger" role="alert">
+                    Not found any contact!
+                </div>
+                <div class="contact-input-box">
+                    <f:form.textfield class="form-control" type="search" name="list" placeholder="search for contact" autofocus="true" />
+                </div>
+    
+                <f:render partial="Table"
+                    arguments="{f:if(condition: '{data.email}', then: '{data:data.email}', else: '{data:contacts}')}" />
+            </f:then>
+            <f:else>
+                <div class="contact-input-box">
+                    <f:form.textfield class="form-control" type="search" name="list" placeholder="search for contact"
+                        value="{data.input}" autofocus="true" />
+                </div>
+
+                <f:render partial="Table"
+                    arguments="{f:if(condition: '{data.email}', then: '{data:data.email}', else: '{data:contacts}')}" />
+            </f:else>
+        </f:if>
+
 </f:form>
 
 </html>

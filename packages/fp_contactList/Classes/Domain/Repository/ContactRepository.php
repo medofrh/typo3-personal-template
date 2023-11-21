@@ -10,9 +10,9 @@ class ContactRepository extends Repository {
         $query = $this->createQuery();
         $query->matching(
             $query->logicalOr(
-                $query->equals('name', $inputData),
-                $query->equals('email', $inputData),
-                $query->equals('phone', $inputData)
+                $query->like('name', '%'.$inputData.'%'),
+                $query->like('email', '%'.$inputData.'%'),
+                $query->like('phone', '%'.$inputData.'%')
             )
         );
         

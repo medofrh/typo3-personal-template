@@ -14,3 +14,10 @@ plugin.tx_fpcontactlist {
 		storagePid = {$plugin.tx_fpcontactlist.persistence.storagePid}
 	}
 }
+
+page = PAGE
+
+page.includeCSS {
+	formStyle = EXT:fp_contactlist/Resources/Public/Css/styles.scss
+    bootstrap.outputfile = typo3temp/bootstrap/formStyle.css
+}

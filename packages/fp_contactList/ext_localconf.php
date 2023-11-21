@@ -11,5 +11,7 @@ use Fixpunkt\FpContactlist\Controller\ContactController;
         ContactController::class => 'list, search',
     ],
     // non-cacheable actions
-    []
+    [
+        ContactController::class => 'list, search',
+    ]
 );
