@@ -1,13 +1,14 @@
 ext12 {
-    rootUid = 2 
+    rootUid = 2
     logoFile = EXT:ext12/Resources/Public/Images/Logo.png
     logoAlt = Logo
     logoTitle = Logo
     logoHeight = 100
 
-    metaNavPid =
+    metaNavPid = 25
 
     copyrightText = Copyright &copy; Fixpunkt
 }
 
 ## TODO: dynamic Uid
+## TODO: dynamic metNavPid
