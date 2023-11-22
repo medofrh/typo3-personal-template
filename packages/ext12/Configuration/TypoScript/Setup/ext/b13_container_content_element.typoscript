@@ -20,3 +20,14 @@ tt_content.Features {
         100 = B13\Container\DataProcessing\ContainerProcessor
     }
 }
+
+tt_content.Testimonial < lib.contentElement
+tt_content.Testimonial {
+    templateName = Testimonial
+    templateRootPaths {
+        10 = EXT:ext12/Resources/Private/Partials/
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}

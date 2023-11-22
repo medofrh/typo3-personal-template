@@ -45,16 +45,32 @@ $GLOBALS['TCA']['tt_content']['types']['cd-detail-section']['columnsOverrides'][
         )
     )
 );
+
 \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
     (
         new \B13\Container\Tca\ContainerConfiguration(
             'Features', // CType
             'feauters Container', // label
-            'Some Description of the 4 Column Container with Aside and Header', // description
+            'feauters Container', // description
             [
                 [
                     ['name' => 'left-text', 'colPos' => 200, 'allowed' => ['CType' => 'text']],
                     ['name' => 'features', 'colPos' => 201, 'allowed' => ['CType' => 'textpic']]
+                ]
+            ] // grid configuration
+        )
+    )
+);
+
+\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+    (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'Testimonial', // CType
+            'Testimonial Container', // label 
+            'Testimonial Container', // description 
+            [
+                [
+                    ['name' => 'text', 'colPos' => 200, 'allowed' => ['CType' => 'textpic']]
                 ]
             ] // grid configuration
         )
