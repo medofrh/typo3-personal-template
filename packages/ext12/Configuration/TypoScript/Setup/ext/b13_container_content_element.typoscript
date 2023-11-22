@@ -9,3 +9,14 @@ tt_content.b13-2cols {
         100 = B13\Container\DataProcessing\ContainerProcessor
     }
 }
+
+tt_content.Features < lib.contentElement
+tt_content.Features {
+    templateName = Features
+    templateRootPaths {
+        10 = EXT:ext12/Resources/Private/Partials/
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
