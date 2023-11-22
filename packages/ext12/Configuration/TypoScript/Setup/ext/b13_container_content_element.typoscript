@@ -31,3 +31,14 @@ tt_content.Testimonial {
         100 = B13\Container\DataProcessing\ContainerProcessor
     }
 }
+
+tt_content.Blog < lib.contentElement
+tt_content.Blog {
+    templateName = Blog
+    templateRootPaths {
+        10 = EXT:ext12/Resources/Private/Partials/
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}

@@ -76,3 +76,21 @@ $GLOBALS['TCA']['tt_content']['types']['cd-detail-section']['columnsOverrides'][
         )
     )
 );
+
+\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+    (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'Blog', // CType
+            'Blog Container', // label 
+            'Blog Container', // description 
+            [
+                [
+                    ['name' => 'title', 'colPos' => 200, 'allowed' => ['CType' => 'text']]
+                ],
+                [
+                    ['name' => 'Blogs', 'colPos' => 201]
+                ],
+            ] // grid configuration
+        )
+    )
+);
