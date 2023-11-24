@@ -1,9 +1,9 @@
 // default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
-tt_content.b13-2cols < lib.contentElement
-tt_content.b13-2cols {
-    templateName = b13-2cols
+tt_content.Header < lib.contentElement
+tt_content.Header {
+    templateName = Header
     templateRootPaths {
-        10 = EXT:ext12/Resources/Private/Templates
+        10 = EXT:ext12/Resources/Private/Partials/
     }
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
@@ -41,4 +41,23 @@ tt_content.Blog {
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
     }
+}
+
+tt_content {
+  feature_element =< lib.contentElement
+  feature_element {
+    templateName = feature_element
+    templateRootPaths {
+      10 = EXT:ext12/Resources/Private/Templates/
+    }
+    dataProcessing {
+      10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+      10 {
+        references {
+            fieldName = image
+        }
+        as = images
+      }
+    }
+  }
 }

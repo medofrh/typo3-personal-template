@@ -1,0 +1,16 @@
+mod.wizards.newContentElement.wizardItems {
+  // add the content element to the tab "common"
+  common {
+    elements {
+      feature_element {
+        iconIdentifier = feature_element
+        title = Feauter Element
+        description = Feauter Element with image and text
+        tt_content_defValues {
+          CType = feature_element
+        }
+      }
+    }
+    show := addToList(feature_element)
+  }
+}

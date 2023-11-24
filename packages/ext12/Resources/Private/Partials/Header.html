@@ -1,17 +1,22 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
+
+
 <f:if condition="{children_201}">
-    <div class="header-children col-6">
-        <f:for each="{children_201}" as="child">
-            <f:format.raw>{child.renderedContent}</f:format.raw>
-        </f:for>
+    <div class="col-lg-8 col-xl-7 col-xxl-6">
+        <div class="my-5 text-center text-xl-start">
+            <f:for each="{children_201}" as="child">
+                <f:format.raw>{child.renderedContent}</f:format.raw>
+            </f:for>
+        </div>
     </div>
 </f:if>
 <f:if condition="{children_202}">
-    <div class="header-children col-6">
+    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
         <f:for each="{children_202}" as="child">
             <f:format.raw>{child.renderedContent}</f:format.raw>
         </f:for>
     </div>
 </f:if>
+
 </html>

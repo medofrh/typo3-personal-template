@@ -1,39 +1,77 @@
 <?php
 
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        // title
+        'label' => 'Feature Element',
+        // plugin signature: extkey_identifier
+        'value' => 'feature_element', // extkey_pluginname
+        // icon identifier
+        'icon' => 'content-text',
+        // group
+        'group' => 'common',
+        // description
+        'description' => 'feature_element description',
+    ],
+    'textmedia',
+    'after'
+);
 
-// override default settings
-$GLOBALS['TCA']['tt_content']['types']['b13-4cols-with-header-container']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
-
-$GLOBALS['TCA']['tt_content']['types']['cd-detail-section']['showitem'] = '
-    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
-        --palette--;;general,
-        --palette--;;headers,               
-        bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,
-    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
-        --palette--;;frames,
-        --palette--;;appearanceLinks,
-    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
-        --palette--;;language,
-    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
-        --palette--;;hidden,
-        --palette--;;access,
-    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
-        categories,
-    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
-        rowDescription,
-    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
-';
-
-$GLOBALS['TCA']['tt_content']['types']['cd-detail-section']['columnsOverrides']['bodytext']['config'] = [
-    'rows' => 5,
-    'enableRichtext' => true,
+$GLOBALS['TCA']['tt_content']['types']['feature_element'] = [
+    'showitem' => '
+            --div--;general,
+               --palette--;;general,
+               image; Image,
+               header; Header,
+               bodytext;text,
+         ',
+    'columnsOverrides' => [
+        'bodytext' => [
+            'config' => [
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default',
+            ],
+        ],
+        'image' => [
+            'label' => 'Image',
+            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                'image', [
+                    'maxitems' => 1,
+                    'appearance' => [
+                        'collapseAll' => 1,
+                        'showAllLocalizationLink' => 1,
+                        'showPossibleLocalizationRecords' => 1,
+                        'showSynchronizationLink' => 1,
+                        'useSortable' => 1,
+                        'enabledControls' => [
+                            'info' => FALSE,
+                            'new' => FALSE,
+                            'dragdrop' => TRUE,
+                            'sort' => FALSE,
+                            'hide' => FALSE,
+                            'delete' => FALSE,
+                            'localize' => TRUE,
+                        ],
+                    ],
+                ],
+                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+            ),
+        ],
+    ],
 ];
+
+// Adds the content element icon to TCA typeicon_classes
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['feature_element'] = 'content-text';
+
+// ...
 
 // four column container with aside
 \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
     (
         new \B13\Container\Tca\ContainerConfiguration(
-            'b13-2cols', // CType
+            'Header', // CType
             'Header Container', // label
             'Header Container', // description
             [
